@@ -1,7 +1,12 @@
 SUFFIXES = [ 'KB', 'MB', 'TB', 'PB', 'EB', 'ZB', 'YB' ]
 
 def approximate_size(size):
-    """ Conver a file size to a human-readable form."""
+    """ Conver a file size to a human-readable form.
+    Keyword arguments:
+    size -- file size in bytes
+
+    Returns: string
+    """
     if size < 0:
         raise ValueError('number must be non-positive')
     multiple = 1024
